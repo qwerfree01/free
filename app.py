@@ -17,7 +17,7 @@ def rea():
 		except:
 			finsh=("finsh")
 			li.append(finsh)
-	return (li,finsh)
+	return str(li)
 	
 	
 
