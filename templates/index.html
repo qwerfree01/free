@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باقات اورانج</title>
+    <style>
+    select {
+            font-size: 18px; /* حجم الخط */
+            padding: 10px;   /* حجم المساحة داخل المربع */
+            width: 270px;    /* عرض المربع */
+            height: 45px;    /* ارتفاع المربع */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* user-select: none; */
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html, body {
+            height: 90%;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            background: #6465Ed;
+            text-align: center;
+        }
+
+        .content {
+            width: 330px;
+            padding: 40px 30px;
+            background: #C0C0C0;
+            border-radius: 10px;
+            box-shadow: -3px -3px 7px #ffffff73,
+            2px 2px 5px rgba(94, 104, 121, 0.288);
+        }
+
+        .content .text {
+            font-size: 29px;
+            font-weight: 600;
+            margin-bottom: 35px;
+            color: #595959;
+        }
+
+        .field {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        .field:nth-child(2) {
+            margin-top: 20px;
+        }
+
+        .field input {
+            height: 99%;
+            width: 99%;
+            padding-left: 40px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            background: #dde1e7;
+            color: #595959;
+            border-radius: 19px;
+            box-shadow: inset 2px 2px 5px #BABECC,
+            inset -5px -5px 10px #ffffff73;
+            text-align: left; /* إضافة هذه الخاصية لتوجيه النص إلى اليسار */
+        }
+
+        .field input::placeholder {
+            text-align: left; /* يجعل النص داخل placeholder على اليسار */
+        }
+
+        .field input:focus {
+            box-shadow: inset 1px 1px 2px #BABECC,
+            inset -1px -1px 2px #ffffff73;
+        }
+
+        .field span {
+            position: absolute;
+            color: #595959;
+            width: 50px;
+            line-height: 50px;
+        }
+
+        .field label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5px;
+            pointer-events: none;
+            color: #666666;
+        }
+
+        .field input:valid ~ label {
+            opacity: 0;
+        }
+
+        .forgot-pass {
+            text-align: left;
+            margin: 10px 0 10px 5px;
+        }
+
+        .forgot-pass a {
+            font-size: 16px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .forgot-pass:hover a {
+            text-decoration: underline;
+        }
+
+        button {
+            margin: 15px 0;
+            width: 90%;
+            height: 50px;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 600;
+            background: #dde1e7;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #595959;
+            box-shadow: 2px 2px 5px #BABECC,
+            -5px -5px 10px #ffffff73;
+        }
+
+        button:focus {
+            color: #3498db;
+            box-shadow: inset 2px 2px 5px #BABECC,
+            inset -5px -5px 10px #ffffff73;
+        }
+    </style>
+</head>
+<body align="center" dir="rtl">
+    <font color="white">
+        <p>تعليمات الاشتراك</p>
+    </font>
+    <font color="white">
+        <p>اولا يرجي إلغاء اي باقة متفعلة ع الخط قبل الشحن ثانيا يرجي الشحن بقيمة الباقة المراد الاشتراك فيها</p>
+    </font><br>
+        <h4><font color="red">{{backage}}</font></h4><br>
+
+    <form method="post" action="/subscribe">
+    
+    	<select name="options" id="options">
+        <option value="2454">اورانج 3 جيجا = 20 رصيد</option>
+        <option value="2455">اورانج 5 جيجا = 30 رصيد</option>
+        <option value="2456">اورانج 10 جيجا = 50 رصيد</option>
+        <option value="2457">اورانج 20 جيجا = 100 رصيد</option>
+        </select>
+        
+        <br><br><br>
+        <div class="field">
+        	
+            <input type="number" name="number" placeholder="Enter Your Phone">
+            <span class="fas fa-user"></span>
+            <label>Phone</label>
+        </div>
+        <br>
+        <div class="field">
+            <input type="password" name="pas" placeholder="Enter Your Password" >
+            <span class="fas fa-lock"></span>
+            <label>Password</label>
+        </div>
+        <div><br>
+            <button><font color="green">activation</font></button>
+            <br><br>~~
+            <h2><font color="red">Designed by sherif omar</font></h2>
+        </div>
+    </form>
+</body>
+</html>
